@@ -118,6 +118,7 @@ if (randomNum = !isNaN){
 In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, 
 chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.*/
 
+console.log('js-snack4')
 const cardElement4 = document.getElementById('jsnack4-card');
 
 // creazione array con nomi invitati alla festa
@@ -143,4 +144,44 @@ if(invitati.includes(askName)){
 Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array. Stampa l'array alla fine.*/
+
+console.log('js-snack5')
+
+const cardElement5 = document.getElementById('jsnack5-card');
+
+//creare un array vuoto
+const arrDispari = []; //array
+
+//costante iterazioni
+let arrIter = 6;
+
+//Chiedi per 6 volte all’utente di inserire un numero -> ciclio for
+
+for(let i = 0; i < arrIter; i++){
+
+    //chiedere il numero e trasformare la stringa in numero
+    const numEs5 = parseInt(prompt('Digita un numero')); //numero
+    console.log(numEs5);
+
+    //calcolare il resto
+    //creare una costante
+    const resto2 = numEs5 % 2
+
+    //SE resto2 è dispari (!== 0) pushare nell'array
+    if(resto2 !==0) { 
+        arrDispari.push(numEs5)
+    }
+
+}
+
+//stampare i valori dell'array
+console.log(arrDispari);
+cardElement5.innerHTML = 'i numeri dispari scelti sono ' + arrDispari
+   
+
+
+
+
+
+
 
