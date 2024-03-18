@@ -55,6 +55,8 @@ if(parola1.length < parola2.length){
     cardElement2.innerHTML = 'la parola più corta è: ' + parola2
 };
 
+//COMMENTO ALL'ESERCIZIO JSNACK2: se l'utente non scrive niente il codice si blocca
+
 // FINE ESERCIZIO 2----------------------------------------------
 
 /*JSNACK 3
@@ -107,7 +109,7 @@ if (randomNum = !isNaN){
 
 //stampare il risultato della somma dei valori dell'arrey
 
-//COMMENTO ALL'ESERCIZIO JSNACK: il controllo di randomNum = !isNaN si 
+//COMMENTO ALL'ESERCIZIO JSNACK2: il controllo di randomNum = !isNaN si 
 //poteva fare direttamente nel ciclo for, per cui se il dato non è un numero
 //il valore non viene pushiato nell'array
 
@@ -137,6 +139,8 @@ if(invitati.includes(askName)){
   cardElement4.innerHTML = 'Ci spiace, non sei stato invitato!'
 }
 //dire se può partecipare o no alla festa
+
+//COMMENTO ALL'ESERCIZIO JSNACK4: come fare se l'utente scrive il nome tutto minuscolo o tutto maiuscolo?
 
 // FINE ESERCIZIO 4-------------------------------------------------
 
@@ -177,7 +181,52 @@ for(let i = 0; i < arrIter; i++){
 //stampare i valori dell'array
 console.log(arrDispari);
 cardElement5.innerHTML = 'i numeri dispari scelti sono ' + arrDispari
-   
+
+
+// FINE ESERCIZIO 5-------------------------------------------------
+
+/*JSNACK 6
+Fate generare un numero random da 0 a 10 al computer,
+ e chiedete all'utente di inserire un suo numero. 
+ Se il numero scelto dall'utente è uguale al numero del computer 
+ informate l'utente che ha vinto, altrimenti ha perso.*/
+
+console.log('js-jsnack6');
+
+const cardElement6 = document.getElementById('jsnack6-card');
+const inputElement6 = document.getElementById('numeroJsnack6');
+const buttonElement6 = document.getElementById('submit6');
+
+//Fate generare un numero random da 0 a 10 al computer:
+//creare una costante 
+
+const maxValue = 10;
+let randomValue = Math.floor((Math.random() * maxValue) + 1) //number
+console.log(randomValue);
+console.log(inputElement6, buttonElement6); 
+
+buttonElement6.addEventListener('click', function(){
+    //recuperare il numero dall'input
+    const numEs6 = parseInt((inputElement6.value)) //number
+    console.log(numEs6, typeof numEs6)
+    
+    //SE numEs6 === a randomValue
+    if (numEs6 === randomValue){
+        //stampiamo hai vinto
+        console.log('HAI VINTO')
+        cardElement6.innerHTML = 'HAI VINTO!'
+
+     //ALTRIMENTI
+    }  else {
+         // stampiamo hai perso
+        console.log('HAI PERSO')
+        cardElement6.innerHTML = 'HAI PERSO!'
+    }  
+    
+});
+
+
+
 
 
 
