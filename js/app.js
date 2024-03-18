@@ -59,6 +59,8 @@ if(parola1.length < parola2.length){
 
 console.log('js-snack3');
 
+const cardElement3 = document.getElementById('jsnack3-card');
+
 //Creare una costante con il numero di iterazioni utente
 const numIterazioni = 10;
 
@@ -68,12 +70,35 @@ const numbers = [];
 //fare partire il ciclo for
 // FINCHE' la variabile è <= 10 chiedi all'utente tramite prompt un numero
 for (let i = 0; i < numIterazioni; i++){
-    let randomNum = parseInt(prompt('digita un numero'))
+    let randomNum = parseInt(prompt('digita un numero')) //number
     console.log(i+1, randomNum)
+    //pushiamo il numero ottenuto nell'array
+    numbers.push(randomNum)
     
 }
 // e aggiungi questo numero nell'array
+console.log(numbers);
+//siamo fuori dal primo ciclo for
 
-//siamo fuori dal ciclo for
+//se volessi validare i dati
+
+
+//sommare i valori dell'array
+//somma ogni valore dell'array per tutta la lunghezza dell'array
+let sumNumbers = 0
+
+for(let i = 0; i < numbers.length; i++){
+    sumNumbers += numbers[i]
+   
+}
+
+console.log(sumNumbers)
+
+if (randomNum = !isNaN){
+    cardElement3.innerHTML = 'la somma dei valori scelti è: ' + sumNumbers
+} else {
+    cardElement3.innerHTML = 'I dati inseriti non sono corretti'
+}
+
 
 //stampare il risultato della somma dei valori dell'arrey
