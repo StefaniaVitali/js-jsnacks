@@ -26,6 +26,8 @@ if (num1 > num2){
     cardElement1.innerHTML = 'Il numero più grande è ' + num2 
 };
 
+// FINE ESERCIZIO 1----------------------------------------------------------------------
+
 /*JSNACK 2:
  L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga.*/
@@ -52,6 +54,8 @@ if(parola1.length < parola2.length){
     console.log(parola2)
     cardElement2.innerHTML = 'la parola più corta è: ' + parola2
 };
+
+// FINE ESERCIZIO 2----------------------------------------------
 
 /*JSNACK 3
  Il software deve chiedere per 10 volte all’utente di inserire un numero.
@@ -102,3 +106,41 @@ if (randomNum = !isNaN){
 
 
 //stampare il risultato della somma dei valori dell'arrey
+
+//COMMENTO ALL'ESERCIZIO JSNACK: il controllo di randomNum = !isNaN si 
+//poteva fare direttamente nel ciclo for, per cui se il dato non è un numero
+//il valore non viene pushiato nell'array
+
+// FINE ESERCIZIO 3-------------------------------------------------
+
+
+/*JSNACK 4
+In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, 
+chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.*/
+
+const cardElement4 = document.getElementById('jsnack4-card');
+
+// creazione array con nomi invitati alla festa
+
+const invitati = ['Marco', 'Paola', 'Francesco', 'Pippo', 'Manuela']; //arrey
+//chiedere tramite promt il nome all'utente
+const askName = prompt('Scrivi il tuo nome'); //string
+
+//verificare se il nome è nella lista
+
+if(invitati.includes(askName)){
+  console.log('Puoi partecipare')
+  cardElement4.innerHTML = 'Puoi partecipare!'
+} else{
+  console.log('Non sei invitato')  
+  cardElement4.innerHTML = 'Ci spiace, non sei stato invitato!'
+}
+//dire se può partecipare o no alla festa
+
+// FINE ESERCIZIO 4-------------------------------------------------
+
+/*JSNACK 5
+Crea un array vuoto.
+Chiedi per 6 volte all’utente di inserire un numero,
+se è dispari inseriscilo nell’array. Stampa l'array alla fine.*/
+
