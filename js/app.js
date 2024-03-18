@@ -1,1 +1,79 @@
-console.log('Jssnack Ciao!')
+console.log('Ciao!')
+
+/*JSNACK 1:
+ L’utente inserisce due numeri in successione, con due prompt.
+ Il software stampa il maggiore*/
+console.log('jsnack1');
+
+const cardElement1 = document.getElementById('jsnack1-card');
+
+//chiedere all'utente il primo numero con prompt
+const num1 = parseInt(prompt ('Scegli un numero')); //Number
+console.log(num1);
+//chidere all'utente il secondo numero con prompt
+const num2 = parseInt(prompt ('Scegli un altro numero')); //Number
+console.log(num2);
+
+//stampare il maggiore:
+//SE num1 è più grande di num2 stampa num 1
+if (num1 > num2){
+    console.log(num1)
+    cardElement1.innerHTML = 'Il numero più grande è ' + num1
+   
+//ALTRIMENTI stampa num2    cardElement1.innerHTML = 'Il numero più grande è ' + num1 ;
+} else {
+    console.log(num2)
+    cardElement1.innerHTML = 'Il numero più grande è ' + num2 
+};
+
+/*JSNACK 2:
+ L’utente inserisce due parole in successione, con due prompt.
+Il software stampa prima la parola più corta, poi la parola più lunga.*/
+
+console.log('jsnack2');
+
+const cardElement2 = document.getElementById('jsnack2-card');
+
+//chiedere all'utente la prima parola
+const parola1 = prompt('ora scegli una parola'); //string
+console.log(parola1);
+//chiedere all'utente la seconda parola
+const parola2 = prompt("Ora scegli un'altra parola"); //string
+console.log(parola2);
+
+//stampare la parola più corta, poi la più lunga
+//SE la lunghezza di parola1 è minore di parola2 stampa parola 1 
+if(parola1.length < parola2.length){
+    console.log(parola1);
+    cardElement2.innerHTML = 'la parola più corta è: ' + parola1;
+
+  //ALTRIMENTI stampa parola2  
+} else {
+    console.log(parola2)
+    cardElement2.innerHTML = 'la parola più corta è: ' + parola2
+};
+
+/*JSNACK 3
+ Il software deve chiedere per 10 volte all’utente di inserire un numero.
+ Il programma stampa la somma di tutti i numeri inseriti.*/
+
+console.log('js-snack3');
+
+//Creare una costante con il numero di iterazioni utente
+const numIterazioni = 10;
+
+//creare un arrey vuoto da popolare con le iterazione dell'utente
+const numbers = [];
+
+//fare partire il ciclo for
+// FINCHE' la variabile è <= 10 chiedi all'utente tramite prompt un numero
+for (let i = 0; i < numIterazioni; i++){
+    let randomNum = parseInt(prompt('digita un numero'))
+    console.log(i+1, randomNum)
+    
+}
+// e aggiungi questo numero nell'array
+
+//siamo fuori dal ciclo for
+
+//stampare il risultato della somma dei valori dell'arrey
