@@ -225,6 +225,128 @@ buttonElement6.addEventListener('click', function(){
     
 });
 
+// FINE ESERCIZIO 6-------------------------------------------------
+
+/*JSNACK 7
+Scrivere un programma che stampi la tabellina del 2, 
+fino al numero 1000.
+Modificate poi il programma in modo che 
+venga chiesto all'utente il numero massimo consentito, 
+e stampare tutta la tabellina del 2 fino al numero inserito.*/
+
+console.log('jsnack7')
+
+const inputElement7 = document.getElementById('numeroJsnack7');
+const buttonElement7 = document.getElementById('submit7');
+
+// tabellina del 2 fino a 1000
+   //creare variabile numero da dividere per 2
+let numTabellina2 = 1000
+console.log(numTabellina2);
+   //creare variabile resto %2
+// const tabellina2 = numTabellina2 % 2
+
+//per 1000 volte controllare 
+for (let i = 0; i <numTabellina2; i++){
+   
+    //se 1000 è divisibile per due 
+   if(i % 2 ===0){
+     console.log(i)
+   }
+
+}
+
+//invocare il bottone al click
+buttonElement7.addEventListener('click', function(){
+   
+    //recuperare il numero dall'input
+    //chiedere all'utente di scegliere il valore di numTabellina 2
+    numTabellina2 = parseInt(inputElement7.value); //number
+    console.log(numTabellina2, typeof numTabellina2);
+
+    for (let i = 0; i <numTabellina2; i++){
+   
+        //se 1000 è divisibile per due 
+       if(i % 2 ===0){
+         console.log(i)
+       }
+    
+    }
+
+});
+
+//COMMENTO ALL'ESERCIZIO JSNACK7:
+//Avendo scritto il ciclo for 2 volte uguale, 
+//esiste un modo per accorpare tutto una volta sola?
+
+// FINE ESERCIZIO 7-------------------------------------------------
+
+/*JSNACK 8
+Fate generare un numero random da 0 a 10 al computer, 
+e chiedete all'utente di inserire un suo numero. 
+Se il numero scelto dall'utente è uguale al numero del computer 
+informate l'utente che ha vinto, altrimenti ha perso. 
+A questo punto fate giocare l'utente, 
+fintanto che non vince la partita contro il PC :)*/
+
+console.log('jsnack8');
+
+const cardElement8 = document.getElementById('jsnack8-card');
+
+//Generare un numero random da 0 a 10 al compute
+const maxValue8 = 10;
+let numRandom8 = Math.floor((Math.random() * maxValue8) +1) //number
+console.log(numRandom8);
+
+
+// PER un numero max di 10 volte 
+for(let i = 0; i<=maxValue8 ; i++){  
+    
+    //chiedere all'utente un numero per cui
+    let numEs8 = parseInt(prompt('Indovina il numero da 0 a 10')) //number
+    console.log(numEs8)
+     
+     //SE il numero è = a numRandom8 
+    if (numEs8 === numRandom8){
+
+        //stampare che ha vinto 
+        console.log('hai vinto')
+        alert('hai vinto')
+        cardElement8.innerHTML = 'Bravo hai indovinato il numero era' + numRandom8
+        //fine ciclo
+        break
+
+      //ALTRIMENTI stampare che ha perso
+    } else {
+        parseInt(prompt('Hai perso! Riprova, sarai più fortunato!'))
+    }  
+ 
+}
+
+//COMMENTO ALL'ESERCIZIO JSNACK8:
+
+
+// FINE ESERCIZIO 7-------------------------------------------------
+
+/*JSNACK 10
+Scrivere un programma a cui venga chiesto all'utente 
+di inserire numeri uno dopo l'altro.
+Quando l'utente scriverà 2 volte consecutive 
+lo stesso numero allora il programma dovrà terminare.*/
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 
